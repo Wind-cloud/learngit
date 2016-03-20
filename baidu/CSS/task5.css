@@ -1,0 +1,114 @@
+body{
+	background-color: #ccc;
+	margin: 0px;
+}
+.nav{
+	width: 100%;
+	height: 50px;
+	background-color: #333;
+}
+.nav img{
+	float: left;
+}
+.nav li{
+	float: right;
+	line-height: 50px;
+	margin: auto 10px;
+	font-size: 10px;
+}
+.nav li a{
+	text-decoration: none;
+}
+.nav li a:visited,.nav li a:link{
+	color: #fff;
+}
+.text{
+	min-width: 250px;
+	background-color: #fff;
+	margin: 20px 410px 20px 20px;
+	box-shadow: 2px 2px 1px #666;
+	padding: 20px;
+}
+.text table{
+	margin: 0px auto;
+	width: 100%;
+	border-collapse:collapse;
+	font-size: 14px;
+}
+.head{
+	color: #fff;
+}
+.text h2{
+	color: #666;
+}
+.author{
+	font-size: 13px;
+	color: #666;
+}
+.img{
+	float: left;
+    width:120px; 
+    height: 120px;
+	border: 1px solid #ccc;
+	margin: 15px;
+}
+.img img{
+	width:90px;
+	margin-left: 15px; 
+}
+.img p{
+	text-align: center;
+	font-size: 10px;
+}
+.clear{
+	clear: both;
+}
+.bottom{
+	width: 100%;
+	height: 60px;
+	background-color: #000;
+}
+.bottom p{
+	line-height: 50px;
+	color: #fff;
+	text-align: center;
+}
+.side{
+	position: absolute;
+	top: 70px;
+	right: 20px;
+	background-color: #fff;
+	box-shadow: 2px 2px 1px #666;
+	padding: 20px;
+	width: 330px;
+	font-size: 15px;
+}
+.side_title{
+	height: 40px;
+	border-left: 3px solid #ccc;
+}
+.side h2{
+	font-size: 18px;
+	margin-left: 18px; 
+	line-height: 40px;
+}
+.discription{
+	color: #999;
+}
+.side textarea{
+	float: right;
+	margin: -30px 2px 0px 0px;
+	font-size: 20px;
+}
+.btn{
+	background-color: #06c;
+	border: 0px;
+	width: 290px;
+	height: 40px;
+	position: relative;
+    left: 20px;
+    top: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #fff;
+}
