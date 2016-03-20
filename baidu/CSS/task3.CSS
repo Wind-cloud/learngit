@@ -1,0 +1,39 @@
+.left,.right,.center{
+	border: 1px solid #999;
+}
+.left,.right{
+	position: absolute;
+	top:20px;
+}
+.container{
+	border: 1px solid #999;
+    height: 400px;
+}
+.left{
+	width: 200px;
+	left: 20px;
+}
+.left img{
+    margin: 20px 80px 20px 20px;
+}
+.left h1{
+	position: absolute;
+	font-size: 25px;
+	top: 25px;
+	right: 20px;
+}
+.right{
+	width: 120px;
+	right: 20px;
+}
+.right img{
+	width: 80px;
+	margin: 10px 20px;
+}
+.center{
+	position:absolute;
+	top: 20px; 
+	margin: 0px 162px 0px 242px;
+	padding: 20px;
+	min-width: 400px;
+}
