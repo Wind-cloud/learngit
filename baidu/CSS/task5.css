@@ -15,6 +15,7 @@ body{
 	line-height: 50px;
 	margin: auto 10px;
 	font-size: 10px;
+	list-style-type: disc!important;
 }
 .nav li a{
 	text-decoration: none;
@@ -23,7 +24,7 @@ body{
 	color: #fff;
 }
 .text{
-	min-width: 250px;
+	min-width: 200px;
 	background-color: #fff;
 	margin: 20px 410px 20px 20px;
 	box-shadow: 2px 2px 1px #666;
@@ -111,4 +112,13 @@ body{
     border-radius: 10px;
     font-size: 20px;
     color: #fff;
+}
+@media screen and (max-width: 700px){
+	.text{
+		min-width: 100%;
+	}
+	.side{
+		position: relative;
+		float: left;
+	}
 }
