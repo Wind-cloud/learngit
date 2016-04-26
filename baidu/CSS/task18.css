@@ -1,0 +1,10 @@
+.number_list{
+	list-style-type: none;
+}
+.number_list li{
+	float: left;
+	color: #fff;
+	background-color: red;
+	padding: 5px;
+	margin: 5px;
+}

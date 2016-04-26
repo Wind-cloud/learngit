@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <link rel="stylesheet" type="text/css" href="CSS/task18.css">
+</head>
+<body>
+   <input type="text" id="number"/>
+   <button type="button" id="left_in">左输入</button>
+   <button type="button" id="right_in">右输入</button>
+   <button type="button" id="left_out">左输出</button>
+   <button type="button" id="right_out">右输出</button>
+   <div>
+     <ul id="list" class="number_list" > 
+     </ul>
+   </div>
+<script type="text/javascript">
+   function leftin(){
+     var x=document.getElementById('number').value;
+     var list=document.getElementById('list');
+     if(x==""||isNaN(x))
+     {
+       alert("请输入数字");
+     }
+     else
+     {
+        var li=document.createElement("li");
+        list.insertBefore(li,list.childNodes[0]);
+        li.innerHTML=x;
+        li.addEventListener("click",del);
+     }/*判断输入是否是数字*/
+   }/*左输入*/
+   function rightin(){
+     var x=document.getElementById('number').value;
+     var list=document.getElementById('list');
+     if(x==""||isNaN(x))
+     {
+       alert("请输入数字");
+     }
+     else
+     {
+        var li=document.createElement("li");
+        list.appendChild(li);
+        li.innerHTML=x;
+        li.addEventListener("click",del);
+     }/*判断输入是否是数字*/
+   }/*右输入*/
+   function leftout(){
+     var x=document.getElementById('number').value;
+     var list=document.getElementById('list');
+     var first=list.firstChild;
+     list.removeChild(first);
+   }/*左输出*/
+   function rightout(){
+     var x=document.getElementById('number').value;
+     var list=document.getElementById('list');
+     var last=list.lastChild;
+     list.removeChild(last);
+   }/*右输出*/
+   function del(){
+     this.parentNode.removeChild(this);
+   }
+   document.getElementById("left_in").addEventListener("click", leftin);
+   document.getElementById("right_in").addEventListener("click", rightin);
+   document.getElementById("left_out").addEventListener("click", leftout);
+   document.getElementById("right_out").addEventListener("click", rightout);
+</script>
+</body>
+</html>
