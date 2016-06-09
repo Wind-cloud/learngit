@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>管理员页面</title>
+    <link href="css/admin.css" rel="stylesheet">
+    <link href="css/foot.css" rel="stylesheet">
+    <link href="css/head.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <header>
+        <div class="top-bar">
+            <ul id="call">
+                <li class="tel">Tel : 8888888</li>
+                <li class="email">Mail : PandaFilm@Gmail.com</li>
+            </ul>
+            <ul id="user">
+                <li class="user">用户名</li>
+                <li class="out">退出登录</li>
+            </ul>
+        </div>
+        <div class="mid-bar">
+            <div class="name">PandaFilm</div>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="button1">
+           <p class="content">添加电影</p>
+        </div>
+        <div class="button2">
+           <p class="content">电影编辑</p>
+        </div>
+        <div class="button3">
+           <p class="content">用户信息</p>
+        </div>
+        <div class="button4">
+           <p class="content">电影评论</p>
+        </div>
+    </div>
+    
+    <!-- 添加新电影 -->
+    <div class="Panda_form1">
+        <form id="addform" method="post" action="/film/admin/add_movie" enctype="multipart/form-date">
+        <div class="form-group">
+            <label>&nbsp电影名：</label>
+            <input type="text" name="movieName" placeholder="电影名">
+        </div>
+        <div class="form-group">
+            <label>电影类型：</label>
+            <input type="text" name="tagDescri" placeholder="电影类型">
+        </div>
+        <div class="form-group">
+            <label>电影介绍：</label>
+            <input type="text" name="introduction" placeholder="电影介绍">
+        </div>
+        <div class="form-group">
+            <label>电影价格：</label>
+            <input type="text" name="price" placeholder="电影价格">
+        </div>
+        <div class="form-group">
+            <label>&nbsp&nbsp演员：</label>
+            <input type="text" name="performer" placeholder="演员">
+        </div>
+        <div class="form-group">
+            <label>&nbsp&nbsp导演：</label>
+            <input type="text" name="director" placeholder="导演">
+        </div>
+        <div class="form-group">
+            <label>上映时间：</label>
+            <input type="date" name="showtime" placeholder="上映时间">
+        </div>
+        <div class="form-group">
+            <label>上传图片：</label>
+            <input type="file" name="cover" id="add_cover">
+        </div>
+        <button type="submit" class="btn_add">确认添加</button>
+      </form>
+    </div>
+
+    <!-- 编辑电影 -->
+    <div class="Panda_form2">
+        <div class="Panda_search">
+              <input type="text" id="Panda_search_movie" placeholder="请输入电影名">
+              <button type="button" class="btn_search" id="Panda_search_movie_btn">电影信息查询</button>
+        </div>
+        <form id="addform" method="post" action="/film/admin/add_movie" enctype="multipart/form-date">
+        <div class="form-group">
+            <label>&nbsp电影名：</label>
+            <input type="text" id="fix_movieName" name="movieName" placeholder="电影名">
+        </div>
+        <div class="form-group">
+            <label>电影类型：</label>
+            <input type="text" id="fix_tagDescri" name="tagDescri" placeholder="电影类型">
+        </div>
+        <div class="form-group">
+            <label>电影介绍：</label>
+            <input type="text" id="fix_introduction" name="introduction" placeholder="电影介绍">
+        </div>
+        <div class="form-group">
+            <label>电影价格：</label>
+            <input type="text" id="fix_price" name="price" placeholder="电影价格">
+        </div>
+        <div class="form-group">
+            <label>&nbsp&nbsp地区：</label>
+            <input type="text" id="fix_area" name="area" placeholder="地区">
+        </div><div class="form-group">
+            <label>&nbsp&nbsp评分：</label>
+            <input type="text" id="fix_score" name="score" placeholder="评分">
+        </div>
+        <div class="form-group">
+            <label>&nbsp&nbsp演员：</label>
+            <input type="text" id="fix_performer" name="performer" placeholder="演员">
+        </div>
+        <div class="form-group">
+            <label>&nbsp&nbsp导演：</label>
+            <input type="text" id="fix_director" name="director" placeholder="导演">
+        </div>
+        <div class="form-group">
+            <label>上映时间：</label>
+            <input type="date" id="fix_showTime" name="showtime" placeholder="上映时间">
+        </div>
+        <div class="form-group">
+            <label>上传图片：</label>
+            <input type="file" id="fix_cover" name="cover" id="add_cover">
+        </div>
+        <button type="submit" class="btn_fix">确认编辑</button>
+      </form>
+    </div>
+    
+    <!-- 电影信息展示 -->
+    <div class="Panda_info">
+      <div class="Panda_container">
+      </div>
+      <div class="Panda_nav">
+      </div>
+    </div>
+
+    <!-- 查询用户信息 -->
+    <div class="Panda_form3">
+      <div class="Panda_search">
+              <input type="text" id="Panda_search_user" placeholder="请输入用户名">
+              <button type="button" class="btn_search" id="Panda_search_user_btn">用户信息查询</button>
+      </div>
+      <form method="post" enctype="multipart/form-date">
+        <div class="form-group">
+            <label>&nbsp用户ID：</label>
+            <input type="text" name="userId" id="serach_userId">
+        </div>
+        <div class="form-group">
+            <label>&nbsp用户名：</label>
+            <input type="text" name="username" id="serach_username">
+        </div>
+        <div class="form-group">
+            <label>电话号码：</label>
+            <input type="text" name="phone" id="serach_userphone">
+        </div>
+        <div class="form-group">
+            <label>用户住址：</label>
+            <input type="text" name="address" id="serach_useraddress">
+        </div>
+        <div class="form-group">
+            <label>电子邮箱：</label>
+            <input type="text" name="email" id="serach_useremail">
+        </div>
+        <div class="form-group">
+            <label>&nbsp&nbsp余额：</label>
+            <input type="text" name="balance" id="serach_userbalance">
+        </div>
+        <div class="form-group">
+            <label>&nbsp&nbsp权限：</label>
+            <input type="text" name="authority" id="serach_userauthority">
+        </div>
+        <div class="form-group">
+            <label>注册时间：</label>
+            <input type="text" name="registerTime" id="serach_userregisterTime">
+        </div>
+      </form>
+    </div>
+
+    <!-- 电影评论展示 -->
+    <div class="Panda_form4">
+        <div class="Panda_search">
+              <input type="text" id="Panda_search_movieName" placeholder="请输入电影名">
+              <input type="text" id="Panda_search_pageNum" placeholder="请输入查询页码">
+              <input type="text" id="Panda_search_pageSize" placeholder="请输入显示数目">
+              <button type="button" class="btn_search" id="Panda_search_movie_btn">电影评论查询</button>
+        </div>
+        <div class="Panda_comments_content"></div>
+        <div class="Panda_comments_nav"></div>
+    </div>
+
+    <footer>@2015-Made from 电子科技大学计科三班</footer>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/panda.js"></script>
+  </body>
+</html>
