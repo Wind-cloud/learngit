@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=640,target-densitydpi=320,user-scalable=no"/>
+    <meta name="MobileOptimized" content="320"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" CONTENT="-1">
+    <meta http-equiv="Cache-Control" CONTENT="no-cache">
+    <meta http-equiv="Pragma" CONTENT="no-cache">
+    <title>乐居买房APP</title>
+    <link type="text/css" rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/animate.min.css">
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/swiper.animate.min.js"></script>
+</head>
+
+<body>
+<div class="wrap">
+
+    <div class="img_link swiper-container">
+        <ul class="img3_link swiper-wrapper"><!--轮播图三-->
+            <li class="img3_p1 swiper-slide">
+                <div class="link3_p1_title ani" swiper-animate-delay="0.1s" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.6s"><img src="../img/link3_p1_title.png"></div>
+                <div class="link3_p1_main ani" swiper-animate-delay="0.2s" swiper-animate-effect="zoomIn" swiper-animate-duration="0.6s"><img src="../img/link3_p1_main.png"></div>
+                <div class="link3_p1_count ani" swiper-animate-delay="0.3s" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.6s">
+                    <p>全国安装量：423万</p>
+                    <p>月活用户：100万</p>
+                    <p>四川安装量：30万</p>
+                    <p>四川月活用户：13.8万</p>
+                </div>
+                <div class="back"><a href="main.html"><img src="../img/back.png"></a></div>
+            </li>
+            <li class="img3_p2 swiper-slide">
+                <p class="link3_p2_title ani" swiper-animate-delay="0.1s" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.8s">乐居买房APP</p>
+                <div class="link3_p2_btns">
+                    <div class="link3_p2_btn1 ani" id="to_page3" swiper-animate-delay="0.1s" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.6s"><img src="../img/link3_p2_btn1.png"></div>
+                    <div class="link3_p2_btn2 ani" id="to_page4" swiper-animate-delay="0.1s" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.6s"><img src="../img/link3_p2_btn2.png"></div>
+                </div>
+                <div class="back"><a href="main.html"><img src="../img/back.png"></a></div>
+            </li>
+            <li class="img3_p3 swiper-slide">
+                <div class="link3_p3_title"><p>启动页全屏</p></div>
+                <div>
+                    <div class="link3_p3_dsc1 ani" swiper-animate-delay="0.1s" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.8s"><img src="../img/link3_p3_dsc1.png"></div>
+                    <div class="link3_p3_dsc2 ani" swiper-animate-delay="0.2s" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.8s"><img src="../img/link3_p3_dsc2.png"></div>
+                    <div class="link3_p3_dsc3 ani" swiper-animate-delay="0.3s" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.8s"><img src="../img/link3_p3_dsc3.png"></div>
+                    <div class="link3_p3_dsc4 ani" swiper-animate-delay="0.4s" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.8s"><img src="../img/link3_p3_dsc4.png"></div>
+                </div>
+                <div class="back"><a href="main.html"><img src="../img/back.png"></a></div>
+            </li>
+            <li class="img3_p4 swiper-slide">
+                <div class="link3_p4_title"><p>乐居买房首页焦点图</p></div>
+                <div>
+                    <div class="link3_p4_dsc1 ani" swiper-animate-delay="0.1s" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.8s"><img src="../img/link3_p4_dsc1.png"></div>
+                    <div class="link3_p4_dsc2 ani" swiper-animate-delay="0.2s" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.8s"><img src="../img/link3_p4_dsc2.png"></div>
+                    <div class="link3_p4_dsc3 ani" swiper-animate-delay="0.3s" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.8s"><img src="../img/link3_p4_dsc3.png"></div>
+                    <div class="link3_p4_dsc4 ani" swiper-animate-delay="0.4s" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.8s"><img src="../img/link3_p4_dsc4.png"></div>
+                </div>
+                <div class="back"><a href="main.html"><img src="../img/back.png"></a></div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+        onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+            swiperAnimateCache(swiper); //隐藏动画元素
+            swiperAnimate(swiper); //初始化完成开始动画
+        },
+        onSlideChangeEnd: function(swiper){
+            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+        },
+    })
+    document.getElementById("to_page3").onclick=function(){
+        mySwiper.slideTo(2, 500, true);
+    }
+    document.getElementById("to_page4").onclick=function(){
+        mySwiper.slideTo(3, 500, true);
+    }
+</script>
+</body>
+
+</html>
